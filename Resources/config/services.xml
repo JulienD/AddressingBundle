@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="commerceguys.addressing.repository.address_format_repository.class">CommerceGuys\Addressing\Repository\AddressFormatRepository</parameter>
+        <parameter key="commerceguys.addressing.repository.subdivision_repository.class">CommerceGuys\Addressing\Repository\SubdivisionRepository</parameter>
+
+        <parameter key="commerceguys.addressing.validator.address_format_validator.class">CommerceGuys\Addressing\Validator\AddressFormatValidator</parameter>
+
+        <parameter key="commerceguys.addressing.provider.data_provider.class">CommerceGuys\Addressing\Provider\DataProvider</parameter>
+
+        <parameter key="commerceguys.addressing.formatter.postal_formatter.class">CommerceGuys\Addressing\Formatter\PostalFormatter</parameter>
+    </parameters>
+
+    <services>
+        <service id="addressing.address_format_repository" class="%commerceguys.addressing.repository.address_format_repository.class%" />
+        <service id="addressing.subdivision_repository" class="%commerceguys.addressing.repository.subdivision_repository.class%" />
+
+        <service id="addressing.address_format_validator" class="%commerceguys.addressing.validator.address_format_validator.class%" />
+
+        <service id="addressing.data_provider" class="%commerceguys.addressing.provider.data_provider.class%" />
+
+        <service id="addressing.postal_formatter" class="%commerceguys.addressing.formatter.postal_formatter.class%" />
+    </services>
+
+</container>

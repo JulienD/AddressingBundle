@@ -1,0 +1,32 @@
+{
+    "name" : "commerceguys/addressing-bundle",
+    "description" : "Addressing library powered by Google's dataset for Symfony2 applications.",
+    "type" : "symfony-bundle",
+    "authors" : [{
+        "name" : "Julien Dubreuil",
+        "homepage": "http://juliendubreuil.fr"
+    }],
+    "keywords" : [
+        "postal", "address", "internationalization", "localization", "bundle"
+    ],
+    "license" : [
+        "MIT"
+    ],
+    "require" : {
+        "php": ">=5.4.0",
+        "commerceguys/addressing": "dev-master",
+        "symfony/http-kernel": "~2.3"
+    },
+    "repositories": [{
+        "type": "git",
+        "url": "https://github.com/commerceguys/addressing.git"
+    }],
+    "require-dev": {
+        "symfony/framework-bundle": "~2.3",
+        "phpunit/phpunit": "~4.3"
+    },
+    "autoload": {
+        "psr-4": { "CommerceGuys\\Bundle\\AddressingBundle\\": "" }
+    },
+    "minimum-stability": "dev"
+}
